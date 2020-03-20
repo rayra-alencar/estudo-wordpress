@@ -1,0 +1,393 @@
+/*!
+Theme Name: Tema de Estudos
+Theme URI: https://gitlab.com/acct.global/acct.implementation/wordpress/vtexday.wp
+Author: rayra
+Author URI: http://www.ricardo-freitas.com.br
+Description: VTEX DAY 2020 custom theme
+Version: 0.0.1
+License: GNU General Public License v2 or later
+License URI: LICENSE
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/* 
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/
+
+
+
+/* ----------REVISTA--------- */
+
+
+#archive{
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(auto, 215px));
+  grid-template-rows: 298px repeat(auto-fill, 310px);
+}
+
+.revista{
+  height: fit-content;  
+  break-inside: avoid;
+  padding: 1px;   
+}
+
+.img-revista{
+  height: 250px;
+  width: 200px;
+  vertical-align: bottom;
+}
+
+#primeira{
+  width: 420px;
+  height: 550px;
+}
+
+#primeira-revista{
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+#btn-vermais{
+  border-radius:0px;
+  background: #000;
+  color: #fff;
+}
+
+
+@media all and (max-width: 768px) {
+
+  #primeira{
+    width: 200px;
+    height: 254px;
+  }
+  
+  #primeira-revista{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+  }
+  
+  #archive{
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(auto, 215px));
+    grid-template-rows: 298px repeat(auto-fill, 310px);
+  }
+
+}
+
+/* ------------------------ */
+
+
+#cards-parallax {
+  background-repeat: no-repeat !important;
+  /* background-position: center center !important; */
+  background-attachment: fixed !important;
+  background-size: cover !important;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  perspective: 2px;
+  transform-style: preserve-3d;
+  max-height: 550px;
+  filter: opacity(0.5);
+}
+
+.card {
+  /* max-width: 300px; */
+  height: 280px;
+}
+
+/* transform: perspective(600px) rotateX(60deg) rotateY(0deg) rotateZ(-45deg); */
+
+#navbar {
+  background: transparent;
+}
+
+/* #container-navbar {
+   
+} */
+
+.mainContainer {
+  perspective: 1px;
+  transform-style: preserve-3d;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  /* margin-top: -64px; */
+}
+
+.mainContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.parallaxContainer {
+  display: flex;
+  flex: 1 0 auto;
+  position: relative;
+  height: 100vh;
+  transform: translateZ(-1px) scale(2);
+  z-index: -1;
+  filter: opacity(0.5);
+
+  /* background-size: 100% 100%; */
+  background-repeat: repeat;
+  background-origin: content-box;
+  background-color: #fae4d8;
+}
+
+.parallaxContainer2 {
+  display: flex;
+  flex: 1 0 auto;
+  position: relative;
+  height: 50vh;
+  transform: translateZ(-0px) scale(5);
+  z-index: 0;
+  filter: opacity(0.5);
+}
+
+.contentContainer {
+  display: block;
+  position: relative;
+  background-color: white;
+  z-index: 1;
+}
+
+.contentContainer2 {
+  display: block;
+  position: relative;
+  background-color: white;
+  z-index: 2;
+}
+
+.content {
+  height: 100vh;
+  margin: 0 auto;
+  /* padding: 75px 0px; */
+}
+
+#txt-parallax span {
+  text-align: center;
+  text-transform: uppercase;
+  /* font-family: "Shadows Into Light", cursive; */
+  /* font-family: "Amatic SC", cursive; */
+}
+
+.nav-link:hover span {
+  color: #838383 !important;
+}
+
+/* ---------------- LADING PAGE ----------------- */
+.mainContainer-horarios {
+  perspective: 1px;
+  transform-style: preserve-3d;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  /* margin-top: -64px; */
+}
+
+.mainContainer-horarios::-webkit-scrollbar {
+  display: none;
+}
+
+.contentContainer-horarios {
+  display: block;
+  position: relative;
+  background-color: white;
+  z-index: 1;
+}
+
+.content-horarios {
+  /* height: 30vh; */
+  margin: 0 auto;
+  font-family: "Lato", sans-serif;
+}
+
+.banner-horarios {
+  display: flex;
+  flex: 1 0 auto;
+  position: relative;
+  height: 80vh;
+  width: 100vw;
+  transform: translateZ(-1px) scale(2);
+  z-index: -1;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+}
+
+#descricao-horarios {
+  font-size: 20px;
+}
+
+.btn-estado {
+  border-radius: 0;
+  box-shadow: 0px 3px 6px #00000029;
+}
+
+#container-txt {
+  max-height: fit-content;
+  font-family: "Lato", sans-serif;
+}
+
+#btn-group-1 {
+  height: auto;
+}
+
+#divisao {
+  height: 10px;
+}
+
+#container-horarios {
+  margin-top: 30px;
+}
+
+
+
+@media all and (max-width: 320px) {
+  .btn-estado {
+    max-width: 50px !important;
+    padding: 0;
+  }
+}
+
+@media all and (max-width: 990px) {
+  .btn-estado {
+    max-width: 130px;
+  }
+
+  .banner-horarios {
+    background-size: auto !important;
+  }
+}
+
+@media all and (min-width: 768px) {
+  #container-horarios {
+    margin-top: 40px;
+  }
+}
+
+@media (min-width: 1020px) and (max-width: 1200px) {
+  .banner-horarios {
+    height: 50vh;
+  }
+}
+
+@media all and (min-width: 1300px) {
+  #divisao {
+    height: 60px;
+  }
+
+  #container-horarios {
+    margin-top: 155px;
+  } 
+}
+
+@media all and (min-width: 1500px) {
+  #container-horarios {
+    margin-top: 80px;
+  }
+}
+
+@media all and (min-width: 1700px) {
+  /* .banner-horarios {
+    background-size: auto !important;
+  } */
+
+  #divisao {
+    height: 160px;
+  }
+
+  .btn-estado {
+    min-width: 226px;
+  }
+
+}
+
+#btn-loja {
+  background: #000;
+  border-radius: 0;
+  font-family: "Lato", sans-serif;
+}
+
+
+/* ---------- LAYOUT ----------- */
+
+#menu-lateral{
+  height: 100vh; 
+  max-width: 20%;
+}
+
+#fotinha img{
+  background-size: cover !important;
+  width: 120px;
+  height: 120px;
+}
+
+#mainContainer {
+  perspective: 1px;
+  transform-style: preserve-3d;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  /* margin-top: -64px; */
+}
+
+#mainContainer::-webkit-scrollbar {
+  display: none;
+}
+
+
+#parallax-inicial {
+  display: flex;
+  flex: 1 0 auto;
+  position: relative;
+  height: 100vh;
+  transform: translateZ(-1px) scale(2);
+  z-index: -1;
+  /* filter: opacity(0.5); */
+
+  /* background-size: 100% 100%; */
+  /* background-repeat: repeat;
+  background-origin: content-box;
+  background-color: #fae4d8; */
+}
+
+
+.parallax_content {
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+#content {
+  height: 100vh;
+  margin: 0 auto;
+  /* padding: 75px 0px; */
+}
+
+#container-sobre{
+  font-family: 'Quicksand', sans-serif;
+}
+
+#pagina-principal h5,
+#pagina-principal h6{
+  font-family: 'Quicksand', sans-serif;
+}
+
